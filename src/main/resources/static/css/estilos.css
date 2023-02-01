@@ -1,0 +1,98 @@
+.home {
+    color: burlywood;
+}
+
+#lista {
+    color: brown;
+}
+/* Pseudo-clases :link, :visited, :hover, :active */
+
+#encabezado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8%;
+    width: 100%;
+    background-color: burlywood;
+    color: white;
+    padding-left: 15px;
+}
+
+#menu {
+    position: absolute;
+    top: 8%;
+    left: 0;
+    height: 4%;
+    width: 100%;
+    background-color: brown;
+    color: white;
+    padding-left: 15px;
+}
+
+#menu a:visited {
+    color: navajowhite;
+}
+
+#menu a:hover {
+    color: blanchedalmond;
+}
+
+#barraLateral {
+    position: absolute;
+    top: 12%;
+    left: 0;
+    height: 81%;
+    width: 20%;
+    background-color: beige;
+    color: black;
+    padding-left: 15px;
+}
+
+#contenido {
+    position: absolute;
+    top: 12%;
+    left: 20%;
+    height: 81%;
+    width: 80%;
+    background-color: burlywood;
+    color: black;
+    padding-left: 15px;
+    overflow: auto;
+}
+
+#piePagina {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 10%;
+    width: 100%;
+    background-color: brown;
+    color: white;
+    padding-left: 15px;
+    text-align: center;
+}
+
+#piePagina address {
+    display: inline;
+}
+
+#encabezadoTabla {
+    font-size: 20px;
+    background-color: darkgoldenrod;
+    color: whitesmoke;
+}
+
+#tablaResumen tr:nth-child(odd) {
+    background-color: peru;
+    color: whitesmoke;
+}
+
+#tablaResumen tr:nth-child(even) {
+    background-color: whitesmoke;
+    color: peru;
+}
+
+#tablaResumen tr {
+    font-size: 15px;
+    font-weight: bolder;
+}

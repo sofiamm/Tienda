@@ -1,38 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <title>Tienda en línea</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Página de la lección 2"/>
+        <meta name="keybords" content="html5, css, web, fidelitas"/>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+
     </head>
     <body>
-        <div>
-            <h1 style="text-align: center">Home</h1>
-            <p>Binevenido a la página de la Tienda en línea</p>
-        </div>
+        <header id="encabezado">
+            <h1>Tienda en línea</h1>
+            <br/>
+        </header>
+        <nav id="menu">
+            <a href="ejemplo-9.html">Back</a>
+            <a href="index.html">Go to home</a>
+            <a href="ejemplo-2.html">Next</a>
+        </nav>
+        <aside id="barraLateral">
+            <h2>Productos más vendidos</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit, tristique rutrum consequat magna eros 
+                torquent, id congue taciti litora praesent nostra. Cras nulla massa nunc vitae a ut vehicula 
+                orci nam aliquet placerat justo ante malesuada ornare platea mollis, fusce auctor fames cum 
+                interdum montes lobortis ligula porttitor condimentum blandit netus consequat egestas litora.
+            </p>
+        </aside>
 
-        <p style="text-align: center">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit, tristique rutrum consequat magna eros 
-            torquent, id congue taciti litora praesent nostra. Cras nulla massa nunc vitae a ut vehicula 
-            orci nam aliquet placerat justo ante malesuada ornare platea mollis, fusce auctor fames cum 
-            interdum montes lobortis ligula porttitor condimentum blandit netus consequat egestas litora.
-        </p>
-        <p style="text-align: right">
-            Ante conubia eleifend leo lectus mollis hac tempus taciti suscipit platea magnis sapien ad accumsan nulla 
-            porttitor, fames pulvinar nullam ridiculus arcu duis dictum vivamus et suspendisse aenean auctor 
-            consequat per proin.Mus gravida torquent tempus viverra duis purus platea curae elementum est, fames 
-            malesuada non habitasse auctor tincidunt etiam lacus per litora metus, commodo pretium egestas eros pharetra 
-            ullamcorper conubia potenti cras.
-        </p>
-        <p style="text-align: center">
-            Ultricies nostra nascetur sapien mauris suspendisse fames eros erat nunc elementum, phasellus molestie enim 
-            convallis habitant semper nec id diam tincidunt vitae, litora pulvinar nisi aenean dui scelerisque mi 
-            potenti torquent. Praesent cubilia semper tempus malesuada vivamus potenti litora dignissim nec cras, 
-            facilisis pellentesque eget eu risus nostra himenaeos porta augue magna nunc, in ridiculus vestibulum sem ad 
-            dis hendrerit lacus magnis.
-        </p>
-        <br>
-        <br>
-        <p>Última línea</p>
+        <section id="contenido">
+            <h2>Articulos más vendidos</h2>
+            <article>
+                <header>Suculentas</header>
+                <p>
+                    Ante conubia eleifend leo lectus mollis hac tempus taciti suscipit platea magnis sapien ad accumsan nulla 
+                    porttitor, fames pulvinar nullam ridiculus arcu duis dictum vivamus et suspendisse aenean auctor 
+                    consequat per proin.Mus gravida torquent tempus viverra duis purus platea curae elementum est, fames 
+                    malesuada non habitasse auctor tincidunt etiam lacus per litora metus, commodo pretium egestas eros pharetra 
+                    ullamcorper conubia potenti cras.
+                </p>
+                <figure>
+                    <img src="images/img-4.jpg" alt="Picture #4" width="200"/>
+                    <figcaption>Imagen con fines ilustrativos</figcaption>
+                </figure>
+            </article>
+            <article>
+                <header>Cajero vintage</header>
+                <p>
+                    Ante conubia eleifend leo lectus mollis hac tempus taciti suscipit platea magnis sapien ad accumsan nulla 
+                    porttitor, fames pulvinar nullam ridiculus arcu duis dictum vivamus et suspendisse aenean auctor 
+                    consequat per proin.Mus gravida torquent tempus viverra duis purus platea curae elementum est, fames 
+                    malesuada non habitasse auctor tincidunt etiam lacus per litora metus, commodo pretium egestas eros pharetra 
+                    ullamcorper conubia potenti cras.
+                </p>
+                <figure>
+                    <img src="images/img-5.jpg" alt="Picture #5" width="200"/>
+                    <figcaption>Una belleza antigua</figcaption>
+                </figure>
+            </article>
+            <article>
+                <header>Abarrotes</header>
+                <p>
+                    Ante conubia eleifend leo lectus mollis hac tempus taciti suscipit platea magnis sapien ad accumsan nulla 
+                    porttitor, fames pulvinar nullam ridiculus arcu duis dictum vivamus et suspendisse aenean auctor 
+                    consequat per proin.Mus gravida torquent tempus viverra duis purus platea curae elementum est, fames 
+                    malesuada non habitasse auctor tincidunt etiam lacus per litora metus, commodo pretium egestas eros pharetra 
+                    ullamcorper conubia potenti cras.
+                </p>
+                <figure>
+                    <img src="images/img-6.jpg" alt="Picture #6" width="200"/>
+                    <figcaption>Acá hay de todo un poco, busque con cuidado</figcaption>
+                </figure>
+            </article>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <article>
+                <header>Líneas de productos</header>
+                <table border="0">
+                    <thead id="encabezadoTabla">
+                        <tr>
+                            <th>Código</th>
+                            <th>Nombre</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaResumen">
+                        <tr>
+                            <td>1</td>
+                            <td>Suculentas</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Libros</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Pinceles</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Pinturas</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Otros</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <br/>
+            <br/>
+        </section>
+        <footer id="piePagina">Derechos Reservados &COPY; 2023 <address>San Jose, Costa Rica</address><address>Tel: 8456-8267</address></footer>
     </body>
 </html>
