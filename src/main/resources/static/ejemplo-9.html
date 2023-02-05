@@ -4,23 +4,36 @@
         <title>Ejemplo 9</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/menu.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <a href="ejemplo-8.html">Back</a>
-        <a href="index.html">Go to home</a>
-        <a href="ejemplo-2.html">Next</a>
-        <h1>Registro de cliente:</h1>
-        <form action="#" method="POST">
-            <label>Nombre</label>
-            <input placeholder="nombre" type="text" name="nombre" value="" size="20"/>
-            <br>
-            <label>Apellidos</label>
-            <input placeholder="apellidos" type="text" name="apellidos" value="" size="30"/>
-            <br>
-            <label>Correo</label>
-            <input placeholder="correo@abc.com" type="email" name="correo" value="" size="15"/>
-            <br>
-            <input type="submit" value="Registrar"/>
-        </form>
+        <header class="header">
+            <nav class="nav">
+                <a href="index.html" class="logo nav-link">Abarotes</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="ejemplo-8.html">&LeftTriangleBar;</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="index.html">&RightTriangleBar;</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="audios.html">Audios</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="videos.html">Videos</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="iframes.html">iFrames</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="formularios.html">Formularios</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content">
+            <h1>Registro de cliente:</h1>
+            <form action="#" method="POST">
+                <label>Nombre</label>
+                <input placeholder="nombre" type="text" name="nombre" value="" size="20"/>
+                <br>
+                <label>Apellidos</label>
+                <input placeholder="apellidos" type="text" name="apellidos" value="" size="30"/>
+                <br>
+                <label>Correo</label>
+                <input placeholder="correo@abc.com" type="email" name="correo" value="" size="15"/>
+                <br>
+                <input type="submit" value="Registrar"/>
+            </form>
+        </div>
     </body>
 </html>

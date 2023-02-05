@@ -6,22 +6,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Se puede arrastrar el archivo para agregar el link -->
         <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="css/menu.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <a href="ejemplo-4.html">Back</a>
-        <a class="home" href="index.html">Go to home</a>
-        <a href="ejemplo-7.html">Next</a>
-        <ul id="lista">
-            <li >Item uno</li>
-            <li>Item dos</li>
-            <li>Item tres</li>
-            <li>Item cuatro</li>
-        </ul>
-        <ol type="a">
-            <li>Item uno</li>
-            <li>Item dos</li>
-            <li>Item tres</li>
-            <li>Item cuatro</li>
-        </ol>
+        <header class="header">
+            <nav class="nav">
+                <a href="index.html" class="logo nav-link">Abarotes</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="ejemplo-5.html">&LeftTriangleBar;</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="ejemplo-7.html">&RightTriangleBar;</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="audios.html">Audios</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="videos.html">Videos</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="iframes.html">iFrames</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="formularios.html">Formularios</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content">
+            <ul id="lista">
+                <li >Item uno</li>
+                <li>Item dos</li>
+                <li>Item tres</li>
+                <li>Item cuatro</li>
+            </ul>
+            <ol type="a">
+                <li>Item uno</li>
+                <li>Item dos</li>
+                <li>Item tres</li>
+                <li>Item cuatro</li>
+            </ol>
+        </div>
     </body>
 </html>
