@@ -4,34 +4,31 @@
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/css/menu.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <header th:replace="layout/plantilla :: header"/>
-        <h2>Lista de clientes</h2>
-        <a th:href="@{/nuevoCliente}">Nuevo Cliente</a>
-        <div th:if="${listaClientes!=null and !listaClientes.empty}">
-            <table border="1">
-                <thead>
-                <th>Nombre</th>
-                <th>Apellidos</th>
-                <th>Correo</th>
-                <th>Teléfono</th>
-                <th colspan="2">Acciones</th>
-                <tbody>
-                    <tr th:each="item: ${listaClientes}">
-                        <td th:text="${item.nombre}"></td>
-                        <td th:text="${item.apellidos}"></td>
-                        <td th:text="${item.correo}"></td>
-                        <td th:text="${item.telefono}"></td>
-                        <td><a th:href="@{/modificarCliente/}+${item.idCliente}">Modificar</a></td>
-                        <td><a th:href="@{/eliminarCliente/}+${item.idCliente}">Eliminar</a></td>
-                    </tr>
-                </tbody>
-                </thead>
-            </table>
-        </div>
-        <div th:if="${listaClientes==null or listaClientes.empty}">
-            <p>¡La lista esta vacía!</p>
+        <div class="contenido">
+            <h2>Articulos disponibles</h2>
+            <div th:if="${listaArticulos!=null and !listaArticulos.empty}">
+                <table border="1">
+                    <thead>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th colspan="2">Acciones</th>
+                    <tbody>
+                        <tr th:each="item: ${listaArticulos}">
+                            <td th:text="${item.descripcion}"></td>
+                            <td th:text="${#numbers.formatDecimal(item.precio, 3, 2)}"></td>
+                            <td><a th:href="@{/carrito/agregar/}+${item.idArticulo}">Agregar</a></td>
+                        </tr>
+                    </tbody>
+                    </thead>
+                </table>
+            </div>
+            <div th:if="${listaArticulos==null or listaArticulos.empty}">
+                <p>¡La lista esta vacía!</p>
+            </div>
         </div>
         <footer th:replace="layout/plantilla :: footer"/>
     </body>

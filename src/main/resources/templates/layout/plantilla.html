@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
@@ -7,19 +7,23 @@
     </head>
     <body>
         <header class="header" th:fragment="header">
-            <h1 style="color: burlywood">Tienda en línea</h1>
+            <nav class="nav">
+                <a th:href="@{/}" class="logo nav-link">Abarrotes</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item">
+                        <a class="nav-menu-link nav-link" th:href="@{/cliente/listado}">Clientes</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a class="nav-menu-link nav-link" th:href="@{/categoria/listado}">Categorias</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a class="nav-menu-link nav-link" th:href="@{/articulo/listado}">Articulos</a>
+                    </li>
+                </ul>
+            </nav>
         </header>
-
-        <footer style="
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                height: 5%;
-                width: 100%;
-                background-color: brown;
-                color: white;
-                padding-left: 15px;
-                text-align: center;"
-                th:fragment="footer">Derechos Reservados &COPY; 2023</footer>
+        <footer class="footer" th:fragment="footer">
+            <p>Derechos Reservados &COPY; 2023</p>
+        </footer>
     </body>
 </html>

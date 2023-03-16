@@ -57,9 +57,29 @@ body {
 
 .nav-menu-link:hover {
     background-color: sienna;
+    font-size: 22px;
     transition: 0.7s;
 }
 
-.content {
-    margin-top: 5%;
+
+
+.contenido {
+    background-color: beige;
+    position: fixed;
+    top: 80px;
+    bottom:20px;
+    left: 0;
+    width: 100%;
+    overflow: auto;
+}
+
+.footer {
+    background-color: sienna;
+    text-align: center;
+    color: white;
+    height: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
