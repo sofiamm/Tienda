@@ -12,13 +12,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Slf4j
 @Controller
 public class ClienteController {
-    
+
     @Autowired
     ClienteService clienteService;
 
     @GetMapping("/cliente/listado")
     public String inicio(Model model) {
-        var clientes = clienteService.getClientes();
+        //var clientes = clienteService.getClientes();
+        //var clientes = clienteService.getClientePorNombre("Luis");
+        var clientes = clienteService.getClientePorApellidos("Castro Mora");
+        //var clientes = clienteService.getClientePorTelefono("5456-8789");
         model.addAttribute("listaClientes", clientes);
         return "/cliente/listado";
     }
@@ -46,5 +49,5 @@ public class ClienteController {
         clienteService.deleteCliente(cliente);
         return "redirect:/cliente/listado";
     }
-    
+
 }
