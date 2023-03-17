@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org/%22%3E">
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>TechShop</title>
+        <title>Lista Artículos</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="/css/menu.css" rel="stylesheet" type="text/css"/>
@@ -9,33 +9,31 @@
     <body>
         <header th:replace="layout/plantilla :: header"/>
         <div class="contenido">
-            <h2>Listado de Clienetes</h2>
-            <a th:href="@{/articulo/nuevo}">Nuevo cliente</a>
-            <br/>
-            <br/>
-            <div th:if="${ListaArticulos != null and !ListaArticulos.empty}">
+            <h2>Lista de Artículos</h2>
+            <a th:href="@{/articulo/nuevo}">Nuevo artículo</a>
+            <div th:if="${listaArticulos != null and !listaArticulos.empty}">
                 <table border="1">
                     <thead>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                     <th>Precio</th>
                     <th>Existencias</th>
                     <th>Activa</th>
                     <th colspan="2">Acciones</th>
                     </thead>
                     <tbody>
-                        <tr th:each="articulo: ${articulos}">
-                            <td th:text="${articulo.descripcion}"></td>
-                            <td th:text="${#numbers.formatDecimal(item.credito.limite, 3, 2)}" style="text-align: right"></td>
-                            <td th:text="${articulo.existencias}" style="text-align: center"></td> 
-                            <td><input type="checkbox" name="activa" th:checked="${articulo.activo}" disabled="true"}"></td>
+                        <tr th:each="item: ${listaArticulos}">
+                            <td th:text="${item.descripcion}"></td>
+                            <td th:text="${#numbers.formatDecimal(item.precio, 3, 2)}" style="text-align: right"></td>
+                            <td th:text="${item.existencias}" style="text-align: center"></td> 
+                            <td><input type="checkbox" name="activa" th:checked="${item.activo}" disabled="true"></td>
 
-                            <td><a th:href="@{/articulo/eliminar/} + ${articulo.idArticulo}">Eliminar</a></td>
-                            <td><a th:href="@{/articulo/modificar/} + ${articulo.idArticulo}">Modificar</a></td>
+                            <td><a th:href="@{/articulo/eliminar/} + ${item.idArticulo}">Eliminar</a></td>
+                            <td><a th:href="@{/articulo/modificar/} + ${item.idArticulo}">Modificar</a></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <div th:if="${ListaArticulos == null or ListaArticulos.empty}">
+            <div th:if="${listaArticulos == null or listaArticulos.empty}">
                 No tenemos articulos que mostrar...
             </div>
             <footer th:replace="layout/plantilla :: footer" />
