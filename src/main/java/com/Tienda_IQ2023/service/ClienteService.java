@@ -19,4 +19,6 @@ public interface ClienteService {
 
     public List<Cliente> getClientePorTelefono(String telefono);
 
+    public List<Cliente> getClientePorNombreApellidoTelefono(String nombre, String apellido, String telefono);
+
 }

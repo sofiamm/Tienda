@@ -12,4 +12,6 @@ public interface ClienteDao extends CrudRepository<Cliente, Long> {
 
     public List<Cliente> findByTelefono(String telefono);
 
+    public List<Cliente> findByNombreOrApellidosOrTelefono(String nombre, String apellidos, String telefono);
+
 }
