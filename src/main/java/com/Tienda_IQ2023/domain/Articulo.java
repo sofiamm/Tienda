@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Table;
 import java.io.Serializable;
 import lombok.Data;
@@ -18,6 +19,7 @@ public class Articulo implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_articulo")
     private Long idArticulo;
     private Long idCategoria;
     private String descripcion;
@@ -25,7 +27,7 @@ public class Articulo implements Serializable {
     private double precio;
     private int existencias;
     private boolean activo;
-    @Column(name="ruta_imagen")
+    @Column(name = "ruta_imagen")
     private String rutaImagen;
 
     public Articulo() {
