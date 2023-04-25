@@ -22,7 +22,7 @@ public class CarritoController {
 
     @GetMapping("/carrito/agregar/{idArticulo}")
     public String agregar(Articulo articulo, HttpSession session) {
-        Long idCarrito = (Long) session.getAttribute("idCarrito");
+        Long idCarrito = (Long)session.getAttribute("idCarrito");
         articulo = articuloService.getArticulo(articulo);
 
         //Verrificar si existe en el carrito del cliente
@@ -39,8 +39,8 @@ public class CarritoController {
 
     @GetMapping("/carrito/listado")
     public String listado(Model model, HttpSession session) {
-        Long idCarrito = (Long) session.getAttribute("idCarrito");
-        boolean esCliente = (boolean) session.getAttribute("esCliente");
+        Long idCarrito = (Long)session.getAttribute("idCarrito");
+        boolean esCliente = (boolean)session.getAttribute("esCliente");
 
         List<CarritoDetalle> carritoDetalles = carritoDetalleService.getCarritoDetalles(idCarrito);
 

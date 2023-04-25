@@ -9,7 +9,6 @@ import com.Tienda_IQ2023.service.CarritoDetalleService;
 import com.Tienda_IQ2023.service.CarritoService;
 import jakarta.servlet.http.HttpServletRequest;
 import java.util.List;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -17,7 +16,6 @@ import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@Slf4j
 @Controller
 public class IndexController {
 
@@ -41,7 +39,7 @@ public class IndexController {
         UserDetails user = null;
 
         if (principal instanceof UserDetails) {
-            user = (UserDetails) principal;
+            user = (UserDetails)principal;
         }
 
         boolean esCliente = false;
@@ -70,7 +68,7 @@ public class IndexController {
         var articulos = articuloService.getArticulos(true);
         model.addAttribute("listaArticulos", articulos);
         model.addAttribute("esCliente", esCliente);
+        
         return "index";
     }
-
 }

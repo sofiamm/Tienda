@@ -18,7 +18,7 @@ public class CarritoServiceImpl implements CarritoService {
 
     @Override
     public Carrito getCarritoCliente(Long idCliente) {
-        //Buscamos si exite carrito para el cliente
+        //Buscamos si exite el carrito para el cliente
         Carrito carritoCliente = carritoDao.findByIdCliente(idCliente).orElse(null);
 
         //Si no existe el carrito, lo creamos
